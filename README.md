@@ -1,8 +1,3 @@
-git add README.md
-    git commit -m "Add professional README"
-    git push origin master:main
-    ```
-
 ### Why this works:
 *   **Badges:** The icons at the top make the repo look "official."
 *   **Clear Headings:** Recruiters can scan it in 5 seconds and know what you built.
