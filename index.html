@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Election Process Education</title>
+  <!-- Content Security Policy to allow inline styles if needed and our own scripts -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'">
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <div class="sidebar">
+      <div class="logo">
+        <div class="logo-icon">🗳️</div>
+        <h2>Election Edu</h2>
+      </div>
+      <nav>
+        <button class="nav-item active" data-target="home-view">
+          🏠 Home
+        </button>
+        <button class="nav-item" data-target="process-view">
+          📋 The Process
+        </button>
+        <button class="nav-item" data-target="quiz-view">
+          📝 Quiz
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        Node.js: <span id="node-version"></span><br/>
+        Electron: <span id="electron-version"></span>
+      </div>
+    </div>
+    
+    <div class="content-area">
+      <!-- Home View -->
+      <div class="view-section active" id="home-view">
+        <div class="section-header">
+          <h1>Election Process Education</h1>
+          <p>Learn how elections work, from registration to certification.</p>
+        </div>
+        
+        <div class="hero-banner" style="margin-bottom: 2rem;">
+          <h2>Your Vote Matters</h2>
+          <p>Understanding the electoral process is the first step to active citizenship.</p>
+        </div>
+        
+        <div class="cards-grid">
+          <div class="card">
+            <h3>Why We Vote</h3>
+            <p>Voting is the foundation of democracy, allowing citizens to have a direct voice in how their government operates and who represents them.</p>
+          </div>
+          <div class="card highlight-card">
+            <h3>Secure Process</h3>
+            <p>Modern elections use multiple layers of security, including voter verification, secure paper trails, and public audits.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Process View -->
+      <div class="view-section" id="process-view">
+        <div class="section-header">
+          <h1>The Voting Process</h1>
+          <p>A step-by-step guide to how an election is conducted.</p>
+        </div>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-icon">1</div>
+            <div class="timeline-content">
+              <h3>Voter Registration</h3>
+              <p>Citizens must register to vote before an election. This step verifies eligibility and assigns voters to the correct polling location based on their residence.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">2</div>
+            <div class="timeline-content">
+              <h3>Casting the Ballot</h3>
+              <p>Voters can typically cast their ballots early, by mail, or in-person on Election Day. Most jurisdictions use secure paper ballots or machines that generate a paper record.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">3</div>
+            <div class="timeline-content">
+              <h3>Tabulation</h3>
+              <p>Ballots are securely collected and counted. Optical scanners process paper ballots rapidly, while maintaining the physical paper trail for potential audits.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">4</div>
+            <div class="timeline-content">
+              <h3>Certification</h3>
+              <p>After all valid votes are counted and any mandatory audits or recounts are completed, election officials formally certify the results, making them official.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Quiz View -->
+      <div class="view-section" id="quiz-view">
+        <div class="section-header">
+          <h1>Test Your Knowledge</h1>
+          <p>See what you've learned about the election process.</p>
+        </div>
+        
+        <div id="quiz-container" class="quiz-container">
+          <!-- Quiz content injected by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./renderer.js"></script>
+</body>
+</html>
